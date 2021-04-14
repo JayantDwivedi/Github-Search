@@ -15,7 +15,7 @@ const Card = () => {
     blog,
     bio,
     location,
-    twitter_username,
+    login,
   } = githubUser;
 
   return (
@@ -24,7 +24,7 @@ const Card = () => {
         <img src={avatar_url} alt={name} />
         <div>
           <h4>{name}</h4>
-          <p>@{twitter_username || "Jayant"}</p>
+          <p>@{login}</p>
         </div>
         <a href={html_url}>follow</a>
       </header>
@@ -32,14 +32,16 @@ const Card = () => {
       <div className="links">
         <p>
           <MdBusiness />
-          {company}
+          {company || "Not Working"}
         </p>
         <p>
           <MdLocationOn />
-          {location || "earth"}
+          {location || "Earth"}
         </p>
+        {/* <MdLink /> */}
         <a href={`https://${blog}`}>
           <MdLink />
+          {blog || "Website Not Found"}
         </a>
       </div>
     </Wrapper>

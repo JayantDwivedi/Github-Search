@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
   return (
     <Wrapper>
-      <h4>GitFolio</h4>
+      <h1>GitFolio</h1>
     </Wrapper>
   );
 };
@@ -20,8 +20,9 @@ const Wrapper = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  h4 {
+  h1 {
     margin-bottom: 0;
+    color: hsl(185, 62%, 45%);
     font-weight: 400;
   }
   img {
